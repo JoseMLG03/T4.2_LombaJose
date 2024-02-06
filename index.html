@@ -6,10 +6,10 @@
     <title>GatoPagina</title>
     
     <link rel="shortcut icon" href="Assets/favicon.png"> 
-    <link rel = "stylesheet" href="CSS.css">
+    <link rel = "stylesheet" href="styles.css">
 
     <script type="module">
-        import { obtenerImagenDeGato,mostrarImagenDeGato } from './Script.js';
+        import { obtenerImagenDeGato,mostrarImagenDeGato } from './scripts.js';
         document.addEventListener('DOMContentLoaded', function () {
             obtenerImagenDeGato();
             mostrarImagenDeGato();
@@ -17,5 +17,30 @@
     </script>
 </head>
 <body>
+    <nav class="BarraDeBusqueda">
+        <ul id="confirmacion">
+            <p>
+                Boton de confirmacion de la busqueda:
+            </p>
+            <button id="botonGato">Confirmar</button>
+        </ul>
+        
+        <ul id="busqueda">
+            <p>
+                Seleccion de tipo de gato a buscar:
+            </p>
+            <select id="razaGato" value="RazaGato">
+                <option value="siames">Siames</option>
+                <option value="bambino">Bambino</option>
+                <option value="bengal">Bengal</option>
+                <option value="aleatorio">Gato aleatorio</option>
+                <option value="null">null(TestTryCatch)</option>
+            </select>
+        </ul>
+    </nav>
+    <div class="container">
+        <img id="GatoImagen">
+    </div>
+   
 </body>
 </html>
