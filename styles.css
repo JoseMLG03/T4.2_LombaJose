@@ -17,6 +17,7 @@ img{
     max-height: 500px;
     background-color: rgb(66, 66, 66);
     border-radius: 50px;
+    margin-left: 35%;
 }
 p{
     color:aliceblue
@@ -24,16 +25,12 @@ p{
 
 
 .BarraDeBusqueda{
-    background-color: rgb(107, 107, 96);
+    background-color: rgb(131, 131, 131);
     padding: 10px; 
     display: flex; 
     justify-content: space-between;
     align-items: center; 
    }
-  nav a:hover {
-    background-color: #555;
-    border-radius: 50PX;
-  }
   .BarraDeBusqueda ul {
     display: flex;
     margin-right: 80px;
