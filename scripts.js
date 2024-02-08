@@ -32,26 +32,26 @@ export function obtenerImagenDeGato() {
 
 export async function mostrarImagenDeGato() {
     
-        const boton = document.getElementById("botonGato");
-        let ErrorMensaje = document.getElementById("errorMensaje");
+    const boton = document.getElementById("botonGato");
+    let ErrorMensaje = document.getElementById("errorMensaje");
         
 
-        boton.addEventListener('click', async () => {
-            try {
-                const imageUrl = await obtenerImagenDeGato();
-                const img = document.getElementById("GatoImagen");
-                img.src = imageUrl;
-                document.body.appendChild(img);
+    boton.addEventListener('click', async () => {
+        try {
+            const imageUrl = await obtenerImagenDeGato();
+            const img = document.getElementById("GatoImagen");
+            img.src = imageUrl;
+            document.body.appendChild(img);
 
-                ErrorMensaje.textContent = "";
-            } catch (error) {
+            ErrorMensaje.textContent = "";
+        } catch (error) {
                 
-                let ErrorMensaje = document.getElementById("errorMensaje");
-                ErrorMensaje.textContent = error.message;
+            let ErrorMensaje = document.getElementById("errorMensaje");
+            ErrorMensaje.textContent = error.message;
 
-                const img = document.getElementById("GatoImagen");
-                img.src = "Assets/error.png";
-                document.body.appendChild(img);
-            }
-        });
+            const img = document.getElementById("GatoImagen");
+            img.src = "Assets/error.png";
+            document.body.appendChild(img);
+        }
+    });
 }
